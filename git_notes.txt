@@ -1,0 +1,105 @@
+**************************************Day 2*******************************************************************
+
+rogerdudler.github
+
+
+To set up ID and mail address
+git config --global user.name "riteshk28"
+git config --global user.email "riteshknknkr@gmail.com"
+To check user id:
+git config list
+
+
+
+
+git init -- for initializing proj
+git status -- for checking tracked and untracked files
+git add filename.py -- for staging the file on git (it is now tracked under git)
+git commit -m "comments" -- commiting and commenting
+git log -- to check comments
+
+
+Pushing it to github
+
+copy link from github
+git remote add %name% %link% -- name is any friendly name, paste the link. This creates a remote reference loaclly
+
+git remote -v -- to check remote referrences for projects
+
+git push -u origin master -- origin is friendlyname, master is branch name, this pushes the changes remotely.
+
+
+
+On every next change in file or addition of new file,
+
+add the file
+commit the file
+push.
+
+git status: shows recent modification
+git log: shows recent commits
+
+
+To remove commits,
+
+check till which commit you want the project, type git log, copy the commit id till which you need the project.
+git remove --hard %commit id%
+git push -f -- option -f is important since remote git does not know that the files are deleted remotely. 
+
+
+To check if remote repo is changed,
+type git fetch
+
+to pull those changes,
+type git pull
+
+
+git reset --hard %commit id%  --- to get deleted file from local repo to local repo
+
+
+
+
+
+*****************************************Day 2********************************************************************
+
+
+
+Day2:
+
+To check branch, type git branch
+to create a branch, git branch %branch name%
+to get into new branch, git checkout %branch name%
+
+
+Master branch file will be present in new branch as well but code will not be updated if they are chenged again under master branch.
+To update those changes in from master to new branch, do a merge.
+
+to merge from master to new branch, be in the new branch and type,
+git merge master
+
+
+To delete new branch, type
+git branch -d %branch name%
+
+
+if you project is deleted from local machine or laptop is changed,
+
+go to github and copy the download link from your project since it is already pushed remotely,
+
+open git bash in a directory where you want the project back, type
+git clone %paste link%
+
+
+
+To protect the code in master branch, go to settings in hithub>branches>protect branch
+now if anyone tries to push the chnges in master branch remotely, it is protected.
+the user has to create another branch (git checkout -b %branch name, to create and checkout simultaneously%) and push it remotely by git push -u origin %branch name%
+
+now create a pull request on github.
+send the browser link of pull request to the approver.
+the approver will open it, approve it and merge it on github.
+
+To make those changes locally, first check by git fetch, see the changes and then git pull 
+
+
+**********************************************Day 3***************************************************************

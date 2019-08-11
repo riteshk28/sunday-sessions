@@ -101,5 +101,3 @@ the approver will open it, approve it and merge it on github.
 
 To make those changes locally, first check by git fetch, see the changes and then git pull 
 
-
-**********************************************Day 3***************************************************************
